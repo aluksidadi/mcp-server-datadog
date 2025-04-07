@@ -28,6 +28,8 @@ export function createDatadogConfig(
   datadogConfig.unstableOperations = {
     'v2.listIncidents': true,
     'v2.getIncident': true,
+    'v2.listRUMEvents': true,
+    'v2.getRUMEvent': true,
   }
 
   return datadogConfig

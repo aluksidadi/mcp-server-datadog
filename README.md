@@ -151,10 +151,36 @@ MCP server for the Datadog API, enabling incident management and more.
     - **Returns**: Scheduled downtime details including ID and active status.
 
 15. `cancel_downtime`
+
     - Cancel a scheduled downtime in Datadog.
     - **Inputs**:
       - `downtimeId` (number): The ID of the downtime to cancel.
     - **Returns**: Confirmation of downtime cancellation.
+
+16. `list_rum_events`
+
+    - List RUM events from Datadog.
+    - **Inputs**:
+      - `from` (number): Start time in epoch seconds.
+      - `to` (number): End time in epoch seconds.
+      - `limit` (optional number): Maximum number of events to return (defaults to 100).
+    - **Returns**: Array of RUM events.
+
+17. `search_rum_events`
+
+    - Search RUM events from Datadog.
+    - **Inputs**:
+      - `query` (string): RUM events query string.
+      - `from` (number): Start time in epoch seconds.
+      - `to` (number): End time in epoch seconds.
+      - `limit` (optional number): Maximum number of events to return (defaults to 100).
+    - **Returns**: Array of matching RUM events.
+
+18. `get_rum_event`
+    - Get a RUM event from Datadog.
+    - **Inputs**:
+      - `eventId` (string): The RUM event ID.
+    - **Returns**: Detailed RUM event information.
 
 ## Setup
 
